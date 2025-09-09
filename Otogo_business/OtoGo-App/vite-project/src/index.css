@@ -1,0 +1,35 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+body  {
+  margin: 0;
+  /* display: flex; */
+  font-family:  "Space Grotesk", Arial, sans-serif !important; 
+}
+
+/* Scroll-un ümumi eni */
+::-webkit-scrollbar {
+  width: 8px; /* Dikey scroll üçün */
+  height: 8px; /* Yatay scroll üçün */
+}
+
+/* Track hissə (arka plan) */
+::-webkit-scrollbar-track {
+  background: #e1e2e8; 
+  border-radius: 8px;
+}
+
+/* Thumb hissə (tutulan hissə) */
+::-webkit-scrollbar-thumb {
+  background: #000; 
+  border-radius: 8px;
+}
+
+/* Hover zamanı thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: #000;
+}
