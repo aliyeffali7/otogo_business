@@ -1,0 +1,11 @@
+# Node.js
+node_modules
+dist
+
+# OS zibili
+__MACOSX
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
