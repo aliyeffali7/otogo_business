@@ -1,7 +1,8 @@
+import { useState } from "react";
 import eyeIcon from "../../../assets/icons/eye.svg";
-import XIcon from "../../../assets/icons/x.svg"
+import XIcon from "../../../assets/icons/x.svg";
 
-const dummyMessages = [
+const initialMessages = [
   {
     id: 1,
     title: "System",
@@ -20,6 +21,12 @@ const dummyMessages = [
 ];
 
 function InboxCards() {
+  const [messages, setMessages] = useState(initialMessages);
+
+  const handleDelete = (id) => {
+    setMessages((prev) => prev.filter((m) => m.id !== id));
+  };
+
   return (
     <div>
       {/* Search bar */}
@@ -33,7 +40,7 @@ function InboxCards() {
 
       {/* Message cards */}
       <div className="mt-4 flex flex-col gap-3">
-        {dummyMessages.map((m) => (
+        {messages.map((m) => (
           <div
             key={m.id}
             className="bg-[#C5C8D3] rounded-[12px] p-4 flex flex-col gap-2 relative"
@@ -43,8 +50,12 @@ function InboxCards() {
               <div className="font-medium">{m.title}</div>
               <div className="flex gap-2 items-center">
                 <img src={eyeIcon} alt="" />
-                <img src={XIcon} alt="" />
-              
+                <img
+                  src={XIcon}
+                  alt=""
+                  className="cursor-pointer"
+                  onClick={() => handleDelete(m.id)}
+                />
               </div>
             </div>
 

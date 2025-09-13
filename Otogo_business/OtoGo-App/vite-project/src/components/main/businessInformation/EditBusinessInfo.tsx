@@ -44,7 +44,6 @@ const EditBusinessInfo: React.FC<Props> = ({
               value={tag}
               onChange={(e) => onTagChange(e.target.value)}
               className="w-full rounded-lg p-2 pl-7 bg-[#21232B] text-[#A9ACBC] outline-none"
-              placeholder="Business tag"
             />
           </div>
         </div>

@@ -7,7 +7,6 @@ import InboxIcon from "../../../assets/icons/inbox.svg";
 import SettingIcon from "../../../assets/icons/settings.svg";
 import ServicesIcon from "../../../assets/icons/services.svg";
 import RatingIcon from "../../../assets/icons/rating.svg";
-import StatisticIcon from "../../../assets/icons/statistic.svg";
 import PaymentIcon from "../../../assets/icons/payment.svg";
 import { ROUTER } from "../../../constants/router";
 import { useLocation, useNavigate } from "react-router";
@@ -33,11 +32,6 @@ const menuItems = [
     path: ROUTER.SERVICES,
   },
   { icon: RatingIcon, label: "Reviews & Rating", path: ROUTER.RATING },
-  {
-    icon: StatisticIcon,
-    label: "Statistics & Analytics",
-    path: ROUTER.STATISTIC,
-  },
   { icon: InboxIcon, label: "Inbox", path: ROUTER.INBOX },
   { icon: PaymentIcon, label: "Payments", path: ROUTER.PAYMENTS },
   { icon: SettingIcon, label: "Settings", path: ROUTER.SETTINGS },

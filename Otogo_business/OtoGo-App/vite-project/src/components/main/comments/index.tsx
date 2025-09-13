@@ -144,10 +144,11 @@ function Comments() {
 </div>
 
 {showPrompt && (
-  <div className="fixed left-1/2 top-1/2 z-[1001] -translate-x-1/2 -translate-y-1/2 bg-green-500 text-white px-8 py-4 rounded-xl shadow-lg text-lg text-center">
-    Our team will investigate the review in question and take the necessary steps if it is found to breach our guidelines.<br />
-    We appreciate your help in keeping the platform safe and reliable.
-  </div>
+ <div className="fixed left-1/2 top-1/2 z-[1001] -translate-x-1/2 -translate-y-1/2 bg-[#14151A] text-[#A9ACBC] px-4 sm:px-8 py-4 rounded-xl shadow-lg text-base sm:text-lg text-center w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl">
+ <p className="text-[#E2E3E9] font-bold">Thank you</p>
+ Our team will investigate the review in question and take the necessary steps if it is found to breach our guidelines.<br />
+ We appreciate your help in keeping the platform safe and reliable.
+</div>
 )}
 
 
