@@ -62,7 +62,7 @@ function Sidebar() {
   };
 
   return (
-    <div className="bg-[#14151b] w-58 min-h-screen justify-start" >
+    <div className="bg-[#14151b] w-58 min-h-screen justify-start font-sans" >
       {/* Logo */}
       <div className="flex flex-col leading-[0.9] m-[50px]">
         <span className="text-white text-[29px] font-medium">OTOGO</span>

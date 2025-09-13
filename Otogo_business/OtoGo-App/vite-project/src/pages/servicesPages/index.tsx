@@ -3,7 +3,7 @@ import UsersCards from "../../components/main/usersCards";
 
 function Services() {
   return (
-    <div>
+    <div className="font-sans">
       <h1 className="text-[48px] font-bold mb-[40px]">
         Professionals & Service
       </h1>

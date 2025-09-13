@@ -22,7 +22,7 @@ function ProductPopup({ isOpen, initialData, onSave, onCancel, onRemove }: Produ
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 font-sans">
       <div className="w-full max-w-2xl rounded-2xl border border-[#2e2e34] bg-[#1c1d22] text-[#e0e0e0] shadow-2xl p-8">
         {/* Images */}
         <div className="flex items-center space-x-4 mb-8">

@@ -176,8 +176,8 @@ export default function UsersCards() {
   }, []);
 
   return (
-    <section className="w-full">
-      <div className="flex justify-between items-center gap-[10px]">
+    <section className="w-full font-sans">
+      <div className="flex justify-between items-center gap-[10px] font-sans">
         <input
           type="text"
           value={query}

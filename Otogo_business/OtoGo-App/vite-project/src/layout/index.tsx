@@ -47,7 +47,7 @@ const { Content, Sider } = Layout;
 
 const AppLayout: React.FC = () => {
   return (
-    <Layout style={{ minHeight: "100vh" }}>
+    <Layout style={{ minHeight: "100vh" }} className="font-sans">
       <Sider
         width={260}
         style={{

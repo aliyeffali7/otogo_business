@@ -167,7 +167,7 @@ export default function CataloguePage() {
   };
 
   return (
-    <div style={{ display: "flex", flexDirection: "column" }}>
+    <div style={{ display: "flex", flexDirection: "column" }} className="font-sans">
       {/* Header */}
       <div style={{ display: "flex", gap: 12, alignItems: "center", marginBottom: 16 }}>
         <Input

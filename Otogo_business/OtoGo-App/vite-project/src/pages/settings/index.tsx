@@ -4,7 +4,7 @@
 
 function Settings() {
   return (
-    <div className="flex-1 flex flex-col items-center justify-center min-h-[80vh] bg-[#181920] rounded-2xl m-6 shadow-lg">
+    <div className="flex-1 flex flex-col items-center justify-center min-h-[80vh] bg-[#181920] rounded-2xl m-6 shadow-lg font-sans">
       <div className="flex flex-col items-center">
         {/* Animasiya - Spinner */}
         <div className="animate-spin rounded-full h-20 w-20 border-t-4 border-[#A9ACBC] border-opacity-50 mb-8" />

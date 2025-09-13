@@ -28,7 +28,7 @@ const EditBranchInfo: React.FC<Props> = ({
   // Demo üçün şəkil və workhours statik saxlanılıb
 
   return (
-    <div>
+    <div className="font-sans">
       <h2 className="text-2xl font-bold mb-6">Edit Branch Profile</h2>
 
       {/* Branch tab-ları */}

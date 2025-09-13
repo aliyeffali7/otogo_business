@@ -3,7 +3,7 @@ import CarWash from "../../../assets/wash.svg";
 import Location from "../location";
 function BranchProfile() {
   return (
-    <div>
+    <div className="font-sans">
       <div className="flex justify-between items-center">
         <h1 className="text-[48px] font-bold">Branch Profile</h1>
         <div className="flex justify-center  items-center gap-7">

@@ -3,7 +3,7 @@ import LoginRight from "../../components/login/rightPart";
 
 function Login() {
   return (
-    <div className="flex justify-between min-h-screen">
+    <div className="flex justify-between min-h-screen font-sans">
       <LoginLeft />
       <LoginRight />
     </div>

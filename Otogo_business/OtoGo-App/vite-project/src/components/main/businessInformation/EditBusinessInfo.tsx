@@ -23,11 +23,11 @@ const EditBusinessInfo: React.FC<Props> = ({
   onCancel,
 }) => {
   return (
-    <div>
-      <h2 className="text-2xl font-bold mb-6">Edit Business Profile</h2>
+    <div className="font-sans">
+      <h2 className="text-5xl font-semibold mb-6">Edit Business Profile</h2>
       <div className="flex flex-col gap-4 ">
         <div>
-          <label className="block mb-1 font-medium">Business Name:</label>
+          <label className="block mb-[10px] font-medium">Business Name:</label>
           <input
             type="text"
             value={name}
@@ -36,7 +36,7 @@ const EditBusinessInfo: React.FC<Props> = ({
           />
         </div>
         <div>
-          <label className="block mb-1 font-medium">Business Tag:</label>
+          <label className="block mb-[10px] font-medium">Business Tag:</label>
           <div className="relative w-full">
             <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[#A9ACBC] pointer-events-none">#</span>
             <input
@@ -48,7 +48,7 @@ const EditBusinessInfo: React.FC<Props> = ({
           </div>
         </div>
         <div>
-          <label className="block mb-1 font-medium">Description:</label>
+          <label className="block mb-[10px] font-medium">Description:</label>
           <textarea
             value={description}
             onChange={(e) => onDescriptionChange(e.target.value)}

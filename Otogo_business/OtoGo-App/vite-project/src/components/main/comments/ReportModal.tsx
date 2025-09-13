@@ -18,36 +18,29 @@ interface ReportModalProps {
 
 const ReportModal: React.FC<ReportModalProps> = ({ open, onClose, onReport }) => {
   const [selected, setSelected] = useState<number | null>(null);
-  const [otherText, setOtherText] = useState<string>("");
 
   if (!open) return null;
 
-  const isOther = selected === reasons.length - 1;
-  const isValid =
-    selected !== null &&
-    (!isOther || (otherText && otherText.trim().length > 15));
+  const isValid = selected !== null;
 
   const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) {
       onClose();
       setSelected(null);
-      setOtherText("");
     }
   };
 
   const handleReportClick = () => {
     if (selected !== null) {
-      const reason =
-        isOther && otherText ? `Other: ${otherText.trim()}` : reasons[selected];
-      onReport(reason); // Modalı bağlıyırıq, mesaj parent komponentdə çıxacaq
+      const reason = reasons[selected];
+      onReport(reason);
       setSelected(null);
-      setOtherText("");
     }
   };
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm font-sans"
       onClick={handleBackdropClick}
     >
       <div className="bg-[#14151A] rounded-2xl p-8 w-full max-w-xl relative text-[#A9ACBC]  max-h-[642px]">
@@ -68,22 +61,12 @@ const ReportModal: React.FC<ReportModalProps> = ({ open, onClose, onReport }) =>
             </button>
           ))}
         </div>
-        {isOther && (
-          <textarea
-            className="w-full rounded-lg p-2 text-black mb-6"
-            rows={4}
-            placeholder="Please write your reason (at least 15 characters)..."
-            value={otherText}
-            onChange={e => setOtherText(e.target.value)}
-          />
-        )}
         <div className="flex gap-4">
           <button
             className="flex-1 py-3 rounded-lg bg-[#2C2F3A] text-white font-semibold transition hover:bg-[#31343A]"
             onClick={() => {
               onClose();
               setSelected(null);
-              setOtherText("");
             }}
           >
             CANCEL

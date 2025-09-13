@@ -27,7 +27,7 @@ const AppProduct: React.FC<AppProductProps> = ({ onCancel, onAdd }) => {
   };
 
   return (
-    <div style={styles.modalOverlay}>
+    <div style={styles.modalOverlay} className='font-sans'>
       <div style={styles.modal}>
         <div style={styles.modalHeader}>
           <div style={styles.modalImagePlaceholder}>

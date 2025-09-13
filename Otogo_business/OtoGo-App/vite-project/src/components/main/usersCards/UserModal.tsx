@@ -95,7 +95,7 @@ export default function UserModal({
   return (
     <Modal open={open} onClose={onClose} widthClass="max-w-[1000px]">
       <div
-className="rounded-[16px] max-h-[80vh] bg-[#14151A] flex flex-col overflow-hidden text-[#E2E3E9] shadow-2xl overflow-y-auto"
+className="rounded-[16px] max-h-[80vh] bg-[#14151A] flex flex-col overflow-hidden text-[#E2E3E9] shadow-2xl overflow-y-auto font-sans"
       >
         {/* Banner */}
         <div className="relative ">

@@ -10,37 +10,47 @@ const initialMessages = [
   },
   {
     id: 2,
-    title: "System",
-    text: "zordu davamı gəlsin. zordu davamı gəlsin. zordu davamı gəlsin. zordu davamı gəlsin.",
+    title: "zerifre",
+    text: " salam zordu davamı gəlsin. zordu davamı gəlsin. zordu davamı gəlsin. zordu davamı gəlsin.",
   },
   {
     id: 3,
     title: "System",
-    text: "zordu davamı gəlsin. zordu davamı gəlsin. zordu davamı gəlsin. zordu davamı gəlsin.",
+    text: " salam zordu davamı gəlsin. zordu davamı gəlsin. zordu davamı gəlsin. zordu davamı gəlsin.",
   },
 ];
 
 function InboxCards() {
   const [messages, setMessages] = useState(initialMessages);
+  const [search, setSearch] = useState("");
 
   const handleDelete = (id) => {
     setMessages((prev) => prev.filter((m) => m.id !== id));
   };
 
+  // Filter messages by search string (case-insensitive)
+  const filteredMessages = messages.filter(
+    (m) =>
+      m.title.toLowerCase().includes(search.toLowerCase()) ||
+      m.text.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
-    <div>
+    <div className="font-sans">
       {/* Search bar */}
       <div className="flex justify-between items-center gap-[10px]">
         <input
           type="text"
-          placeholder="Search "
+          placeholder="Search"
           className="rounded-[12px] border border-[#A9ACBC] py-[15px] px-[16px] w-full"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
         />
       </div>
 
       {/* Message cards */}
       <div className="mt-4 flex flex-col gap-3">
-        {messages.map((m) => (
+        {filteredMessages.map((m) => (
           <div
             key={m.id}
             className="bg-[#C5C8D3] rounded-[12px] p-4 flex flex-col gap-2 relative"
@@ -63,6 +73,9 @@ function InboxCards() {
             <div className="text-sm text-[#2C2F3A]">{m.text}</div>
           </div>
         ))}
+        {filteredMessages.length === 0 && (
+          <div className="text-center text-gray-500 mt-4">No messages found.</div>
+        )}
       </div>
     </div>
   );
