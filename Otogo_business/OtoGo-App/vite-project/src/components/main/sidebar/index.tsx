@@ -62,7 +62,7 @@ function Sidebar() {
   };
 
   return (
-    <div className="bg-[#14151b] w-58 min-h-screen justify-start font-sans" >
+    <div className="bg-[#14151b] w-58 min-h-screen justify-start font-sans p-5" >
       {/* Logo */}
       <div className="flex flex-col leading-[0.9] m-[50px]">
         <span className="text-white text-[29px] font-medium">OTOGO</span>
@@ -78,7 +78,7 @@ function Sidebar() {
             <div
               key={idx}
               onClick={() => handleClick(item)}
-              className={`group flex items-center gap-[20px] cursor-pointer p-2 rounded transition-colors duration-200
+              className={`group flex items-center gap-[20px] cursor-pointer p-2 rounded-md transition-colors duration-200
                 ${isActive ? "bg-white text-black" : "hover:bg-white"}
               `}
             >

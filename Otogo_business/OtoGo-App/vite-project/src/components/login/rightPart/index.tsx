@@ -22,13 +22,13 @@ function LoginRight() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center w-[50%] bg-[#e1e2e8]">
-      <div className="flex flex-col gap-6">
-        <h1 className="text-center text-[39px] font-medium text-[#1a1a1a] w-full">
+    <div className="flex flex-col justify-center items-center w-full sm:w-1/2 bg-[#e1e2e8] min-h-screen py-12 sm:py-0">
+      <div className="flex flex-col gap-6 w-full max-w-md px-4 sm:px-0">
+        <h1 className="text-center text-3xl sm:text-[39px] font-medium text-[#1a1a1a] w-full">
           Login
         </h1>
 
-        <div className="flex flex-col gap-2" style={{width: 450}}>
+        <div className="flex flex-col gap-2 w-full">
           <label htmlFor="email" className="text-sm text-[#1a1a1a]">
             Phone Number
           </label>
@@ -38,11 +38,11 @@ function LoginRight() {
             placeholder="Phone"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
-            className="w-[450px] px-4 py-3 rounded-[10px] border border-[#c5c7d5] text-sm placeholder:text-[#b1b1b1] outline-none"
+            className="w-full px-4 py-3 rounded-[10px] border border-[#c5c7d5] text-sm placeholder:text-[#b1b1b1] outline-none"
           />
         </div>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 w-full">
           <label htmlFor="password" className="text-sm text-[#1a1a1a]">
             Password
           </label>
@@ -52,7 +52,7 @@ function LoginRight() {
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-[450px] px-4 py-3 rounded-[10px] border border-[#c5c7d5] text-sm placeholder:text-[#b1b1b1] outline-none"
+            className="w-full px-4 py-3 rounded-[10px] border border-[#c5c7d5] text-sm placeholder:text-[#b1b1b1] outline-none"
           />
         </div>
 
